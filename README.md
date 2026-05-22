@@ -259,7 +259,6 @@ A weekend project, not a product. Real next steps:
 
 ## Acknowledgments
 
-Built as a portfolio project. Inspired by Great Question's product
-direction (customer research as searchable, queryable infrastructure).
-The synthetic corpus, fictional product "Linkup," and all interview
-participants are fabricated.
+Built as a portfolio project to learn agentic search, MCP tooling, and
+eval-driven development. The synthetic corpus, fictional product "Linkup,"
+and all interview participants are fabricated.
