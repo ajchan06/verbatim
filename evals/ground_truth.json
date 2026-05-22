@@ -1,0 +1,92 @@
+{
+  "description": "Ground-truth Q&A pairs over the 10-interview Linkup corpus. Used by src/eval.py to score retrieval precision and answer faithfulness.",
+  "questions": [
+    {
+      "id": "Q1",
+      "question": "Which interviewees mentioned the onboarding having too many setup steps?",
+      "expected_interviews": ["01_sarah", "02_marcus", "04_tom"],
+      "type": "multi_interview_retrieval",
+      "fact_id": "F1"
+    },
+    {
+      "id": "Q2",
+      "question": "Who complained about the mobile app being worse than the web app?",
+      "expected_interviews": ["03_priya", "05_diana", "10_yuki"],
+      "type": "multi_interview_retrieval",
+      "fact_id": "F2"
+    },
+    {
+      "id": "Q3",
+      "question": "Which users said round-robin routing was a key reason they value the product?",
+      "expected_interviews": ["05_diana", "06_jamal", "08_rafael"],
+      "type": "multi_interview_retrieval",
+      "fact_id": "F3"
+    },
+    {
+      "id": "Q4",
+      "question": "Which interviewees mentioned pricing as a concern for teams under 10 people, or as a reason they didn't purchase or expand?",
+      "expected_interviews": ["02_marcus", "09_chloe", "10_yuki"],
+      "type": "multi_interview_retrieval",
+      "fact_id": "F4"
+    },
+    {
+      "id": "Q5",
+      "question": "Who said the Salesforce integration was unreliable or broken?",
+      "expected_interviews": ["06_jamal", "08_rafael", "09_chloe"],
+      "type": "multi_interview_retrieval",
+      "fact_id": "F5"
+    },
+    {
+      "id": "Q6",
+      "question": "Which users asked for a Notion integration?",
+      "expected_interviews": ["05_diana", "07_lena"],
+      "type": "multi_interview_retrieval",
+      "fact_id": "F6"
+    },
+    {
+      "id": "Q7",
+      "question": "What specifically caused Sarah to lose trust in the product during her trial?",
+      "expected_interviews": ["01_sarah"],
+      "expected_answer_contains": ["buffer", "default", "zero"],
+      "type": "single_interview_fact",
+      "fact_id": "F7"
+    },
+    {
+      "id": "Q8",
+      "question": "Why did Yuki choose SavvyCal over Linkup?",
+      "expected_interviews": ["10_yuki"],
+      "expected_answer_contains": ["email", "embed"],
+      "type": "single_interview_fact",
+      "fact_id": "F8"
+    },
+    {
+      "id": "Q9",
+      "question": "How big is Chloe's team?",
+      "expected_interviews": ["09_chloe"],
+      "expected_answer_contains": ["35", "thirty-five", "thirty five"],
+      "type": "single_interview_fact",
+      "fact_id": "F10"
+    },
+    {
+      "id": "Q10",
+      "question": "What is the most-loved feature among Team-plan customers?",
+      "expected_interviews": ["05_diana", "06_jamal", "08_rafael"],
+      "expected_answer_contains": ["round-robin", "round robin", "routing"],
+      "type": "synthesis",
+      "fact_id": "F3"
+    },
+    {
+      "id": "Q11",
+      "question": "What are the top three reasons trial users churn?",
+      "expected_themes": ["onboarding setup steps", "pricing", "mobile app"],
+      "expected_interviews_subset": ["01_sarah", "02_marcus", "03_priya", "04_tom"],
+      "type": "synthesis"
+    },
+    {
+      "id": "Q12",
+      "question": "Did anyone talk about the booking page design positively?",
+      "expected_interviews": ["02_marcus", "05_diana", "07_lena", "10_yuki"],
+      "type": "multi_interview_retrieval"
+    }
+  ]
+}

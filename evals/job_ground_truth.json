@@ -1,0 +1,45 @@
+{
+  "description": "Ground-truth Q&A pairs over the 6-mock-interview job-prep corpus. Tests the same backbone (chunking, embedding, agent, evals) on a different domain — proves the architecture generalizes.",
+  "questions": [
+    {
+      "id": "JQ1",
+      "question": "In which interviews did the candidate self-identify a weakness or thing they'd improve next time?",
+      "expected_interviews": ["01_behavioral_swe", "02_system_design", "03_coding_strings", "04_behavioral_failure", "05_project_deep_dive"],
+      "type": "multi_interview_retrieval"
+    },
+    {
+      "id": "JQ2",
+      "question": "Which interview is about the candidate's project, Verbatim?",
+      "expected_interviews": ["01_behavioral_swe", "05_project_deep_dive"],
+      "type": "multi_interview_retrieval"
+    },
+    {
+      "id": "JQ3",
+      "question": "What edge case did the candidate miss in the coding interview?",
+      "expected_interviews": ["03_coding_strings"],
+      "expected_answer_contains": ["None", "null", "input validation"],
+      "type": "single_interview_fact"
+    },
+    {
+      "id": "JQ4",
+      "question": "Why did the candidate choose to use synthetic data for Verbatim?",
+      "expected_interviews": ["01_behavioral_swe", "05_project_deep_dive"],
+      "expected_answer_contains": ["ground truth", "control"],
+      "type": "synthesis"
+    },
+    {
+      "id": "JQ5",
+      "question": "What was the candidate's stock answer for 'tell me about a failure' and what was the better answer?",
+      "expected_interviews": ["04_behavioral_failure"],
+      "expected_answer_contains": ["IDOR", "math"],
+      "type": "single_interview_fact"
+    },
+    {
+      "id": "JQ6",
+      "question": "What's the candidate's main concern about the role?",
+      "expected_interviews": ["06_why_this_company"],
+      "expected_answer_contains": ["intern", "three months", "over-promising"],
+      "type": "single_interview_fact"
+    }
+  ]
+}

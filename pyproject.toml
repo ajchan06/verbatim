@@ -1,0 +1,30 @@
+[project]
+name = "verbatim"
+version = "0.1.0"
+description = "Agentic search over customer research interviews. Eval-driven."
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40.0",     # Claude API client (agent + LLM-as-judge)
+    "voyageai>=0.3.0",       # text embeddings
+    "chromadb>=0.5.0",       # local vector store
+    "python-dotenv>=1.0.0",  # loads .env file
+    "streamlit>=1.40.0",     # demo UI
+    "mcp>=1.0.0",            # MCP server for Claude Desktop integration
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
