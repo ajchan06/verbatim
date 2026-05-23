@@ -66,18 +66,41 @@ class VectorStore:
 
     # ---------- embedding ----------
 
+    # Conservative batching for Voyage's free-tier-without-card rate limit
+    # (3 requests/minute, 10K tokens/minute). Small batches + sleep keep us
+    # under both. If you add a credit card on Voyage's dashboard, you can
+    # remove the sleep and bump BATCH_SIZE back to 128 for a ~50x speedup.
+    _FREE_TIER_BATCH_SIZE = 16
+    _FREE_TIER_SLEEP_SECONDS = 22  # 3 RPM = one call every ~20s; we leave headroom
+
     def _embed(self, texts: list[str], *, input_type: str) -> list[list[float]]:
-        """Embed a batch of texts. input_type is 'document' or 'query'."""
-        # Voyage caps batch at 128 inputs; chunk if needed.
+        """Embed a batch of texts. input_type is 'document' or 'query'.
+
+        Rate-limited for the Voyage free tier (no card on file): batches of
+        16 with ~22s between calls. For 198 chunks ÷ 16 = ~13 batches ≈ 5 minutes.
+        Slow but free.
+        """
+        import time
+
         all_embeddings: list[list[float]] = []
-        for i in range(0, len(texts), 128):
-            batch = texts[i : i + 128]
+        total_batches = (len(texts) + self._FREE_TIER_BATCH_SIZE - 1) // self._FREE_TIER_BATCH_SIZE
+
+        for i in range(0, len(texts), self._FREE_TIER_BATCH_SIZE):
+            batch_num = i // self._FREE_TIER_BATCH_SIZE + 1
+            batch = texts[i : i + self._FREE_TIER_BATCH_SIZE]
+            print(f"  embedding batch {batch_num}/{total_batches} ({len(batch)} items)...", flush=True)
+
             result = self._voyage.embed(
                 batch,
                 model=VOYAGE_MODEL,
                 input_type=input_type,
             )
             all_embeddings.extend(result.embeddings)
+
+            # Don't sleep after the last batch
+            if batch_num < total_batches:
+                time.sleep(self._FREE_TIER_SLEEP_SECONDS)
+
         return all_embeddings
 
     # ---------- ingest ----------
