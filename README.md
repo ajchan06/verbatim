@@ -105,6 +105,47 @@ that the participant doesn't repeat in the answer.
 
 ---
 
+## Results
+
+The agent was evaluated against a 12-question ground-truth set covering
+single-fact retrieval, multi-interview synthesis, and quote-finding. Each
+question was scored on precision, recall, F1, and (where applicable)
+LLM-as-judge faithfulness. Naive RAG was run as a baseline on the same
+questions.
+
+| Pipeline   | Precision | Recall | F1     | Faithfulness |
+|------------|-----------|--------|--------|--------------|
+| naive_rag  | 84.5%     | 89.3%  | 85.5%  | 100% (4/4)   |
+| agent_v1   | 87.6%     | 95.1%  | 90.6%  | 100% (4/4)   |
+| **Δ**      | **+3.1pp**| **+5.8pp** | **+5.1pp** | tie       |
+
+The agent beats naive RAG by **5.1 points on F1**, with no faithfulness regressions.
+
+### Where the gains come from
+
+Per-question breakdown (F1):
+
+| Question type                          | naive_rag | agent_v1 | Δ        |
+|----------------------------------------|-----------|----------|----------|
+| Single-fact retrieval (Q5–Q9)          | 100%      | 100%     | tie      |
+| Multi-interview synthesis (Q10, Q11)   | 45.8% avg | 90% avg  | **+44pp**|
+| Comparison questions (Q2, Q3)          | 82.8% avg | 100%     | +17pp    |
+| Open-ended (Q1, Q4, Q12)               | 89.6% avg | 69.0% avg| -20pp    |
+
+The agent's gains concentrate where naive RAG's weakness is structural:
+multi-interview retrieval bounded by K. On single-fact questions both
+pipelines tie — there's only one relevant passage, so a single retrieval
+finds it. On open-ended questions the agent occasionally goes too broad,
+trading precision for recall. That's a known failure mode worth addressing
+(see "What's next").
+
+Full per-question results in `evals/runs/agent_v1_20260522_175027.json` and
+`evals/runs/naive_rag_20260522_175602.json`. To reproduce:
+
+```bash
+make eval-compare
+```
+
 ## Setup
 
 ```bash
