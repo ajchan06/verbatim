@@ -1,0 +1,233 @@
+[
+  {
+    "question_id": "Q1",
+    "question": "Which interviewees mentioned the onboarding having too many setup steps?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "01_sarah",
+      "02_marcus",
+      "04_tom"
+    ],
+    "actual_interviews": [
+      "01_sarah",
+      "02_marcus",
+      "04_tom",
+      "06_jamal",
+      "08_rafael"
+    ],
+    "precision": 0.6,
+    "recall": 1.0,
+    "f1": 0.7499999999999999,
+    "faithfulness_pass": null,
+    "latency_seconds": 17.19590154197067,
+    "answer": "Based on the research, here are the interviewees who specifically mentioned the onboarding having too many setup steps:\n\n---\n\n### 1. **Sarah K.** [01_sarah] \u2014 Churned trial user\nSarah described going through a multi-screen setup wizard and feeling frustrated by the number of steps before she could do what she actually came to do:\n> \"By the time I got to the third or fourth screen I kind of just wanted to send a link to someone. That was the whole reason I was there.\"\nShe estimated it felt like **7 screens** (perhaps actually 5), covering calendar connection, working hours, event types, meeting durations, buffer time, and a URL slug.\n\n---\n\n### 2. **Marcus T.** [02_marcus] \u2014 Churned trial user\nMarcus said setup was \"a pain,\" estimating roughly **a dozen screens**, and his team member gave up entirely:\n> \"There's a lot of screens before you get to the actual using it part\u2026 My designer Jess just gave up halfway through.\"\nHe also wanted the product to just pick sensible defaults instead of asking so many questions upfront.\n\n---\n\n### 3. **Tom B.** [04_tom] \u2014 Churned trial user\nTom listed the steps he encountered and gave up during the trial, highlighting that the tool felt over-engineered for a solo user:\n> \"I don't need event types and routing and notifications and branding. I need one link. I think the tool is built for teams and it's making solo users do team-level setup.\"\nHe even closed the tab mid-setup.\n\n---\n\n### 4. **Jamal H.** [06_jamal] \u2014 Active paying customer\nJamal noted the issue more briefly as a minor friction point, not a dealbreaker:\n> \"Setting up new users is more clicks than it needs to be.\"\n\n---\n\n### 5. **Rafael M.** [08_rafael] \u2014 Customer evaluating expansion\nRafael flagged the per-user provisioning process as a scalability concern:\n> \"To set up a new user takes a non-trivial amount of work\u2026 For five users, fine. For forty, I'd want it more automated.\"\n\n---\n\n**In summary**, the strongest complaints came from churned trial users (Sarah, Marcus, Tom), while current/expanding customers (Jamal, Rafael) noted it as a friction point rather than a dealbreaker.",
+    "notes": ""
+  },
+  {
+    "question_id": "Q2",
+    "question": "Who complained about the mobile app being worse than the web app?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "03_priya",
+      "05_diana",
+      "10_yuki"
+    ],
+    "actual_interviews": [
+      "03_priya",
+      "05_diana",
+      "10_yuki"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 13.777510124957189,
+    "answer": "Two participants strongly complained about the mobile app being inferior to the web app, and a third also mentioned it negatively:\n\n---\n\n### 1. **Priya R.** [03_priya] \u2014 *Most vocal*\nPriya, a real estate agent who works primarily from her phone, had significant frustrations:\n- \"Half the things I can do on web I can't do on mobile. I couldn't edit my event types from the phone. I had to pull over and use my laptop one time which is the opposite of what this should be doing for me.\"\n- \"It's slow. Like genuinely slow, like I'd tap something and there'd be a spinner for five seconds.\"\n- \"The UI is just \u2014 it feels like nobody tested it on a phone. Buttons too small, text gets cut off, my booking link wouldn't copy properly half the time.\"\n- She ultimately churned, and confirmed: \"If the mobile experience were as good as web, would you have stayed?\" \u2192 **\"Yes. Probably.\"**\n\n---\n\n### 2. **Diana O.** [05_diana] \u2014 *Head of Ops*\nDiana described it as feeling like \"a totally different product\":\n- \"The mobile app is rough... the mobile experience is like a totally different product. It's slower, missing features, the navigation is weird. I just don't use it on mobile, I wait until I'm at a laptop.\"\n- She also noted her team shares the frustration: \"a lot of my team complains about it too.\"\n- In her closing summary she said: \"Just don't expect much from the mobile app.\"\n\n---\n\n### 3. **Yuki** [10_yuki] \u2014 *Mentioned in passing*\nYuki also noted the mobile experience as a factor: \"I tried the Linkup mobile app once and never opened it again.\"\n\n---\n\nIn summary, **Priya** and **Diana** were the most explicit in comparing the mobile app unfavorably to the web app, while **Yuki** also flagged it as a pain point.",
+    "notes": ""
+  },
+  {
+    "question_id": "Q3",
+    "question": "Which users said round-robin routing was a key reason they value the product?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "05_diana",
+      "06_jamal",
+      "08_rafael"
+    ],
+    "actual_interviews": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 2.2959777920041233,
+    "answer": "(error: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model.)",
+    "notes": "pipeline raised: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model."
+  },
+  {
+    "question_id": "Q4",
+    "question": "Which interviewees mentioned pricing as a concern for teams under 10 people, or as a reason they didn't purchase or expand?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "02_marcus",
+      "09_chloe",
+      "10_yuki"
+    ],
+    "actual_interviews": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 2.971507624955848,
+    "answer": "(error: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model.)",
+    "notes": "pipeline raised: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model."
+  },
+  {
+    "question_id": "Q5",
+    "question": "Who said the Salesforce integration was unreliable or broken?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "06_jamal",
+      "08_rafael",
+      "09_chloe"
+    ],
+    "actual_interviews": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 1.8665059169288725,
+    "answer": "(error: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model.)",
+    "notes": "pipeline raised: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model."
+  },
+  {
+    "question_id": "Q6",
+    "question": "Which users asked for a Notion integration?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "05_diana",
+      "07_lena"
+    ],
+    "actual_interviews": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 2.443466250086203,
+    "answer": "(error: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model.)",
+    "notes": "pipeline raised: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model."
+  },
+  {
+    "question_id": "Q7",
+    "question": "What specifically caused Sarah to lose trust in the product during her trial?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "01_sarah"
+    ],
+    "actual_interviews": [
+      "01_sarah"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": true,
+    "latency_seconds": 11.995036458130926,
+    "answer": "Here's a detailed breakdown of what caused Sarah to lose trust in the product during her trial:\n\n### The Core Incident: A Faulty Default Setting\nThe trust-breaking moment happened a few days into her trial. Sarah had sent a booking link to a new client, and the client was scheduled **back-to-back with an existing client** \u2014 with no buffer time in between. Sarah, as a therapist, needs at least 15 minutes between sessions for notes and recovery.\n\nShe traced the problem back to the **buffer time setting**, which she was fairly certain had **defaulted to zero**: *\"I went back into the settings and the default \u2014 and I'm pretty sure it was the default \u2014 was zero. Zero buffer. Which is wild to me because who actually wants zero buffer between meetings.\"*\n\n### The Downstream Consequence\nThe bad booking forced her to do exactly what she had signed up to avoid \u2014 **manually emailing a client to reschedule**: *\"I'd had to email the client and reschedule, which is exactly the thing I was trying to avoid by getting a tool like this.\"*\n\n### Why It Killed Her Trust\nEven though she fixed the setting and it worked fine afterward, the damage was done. As she put it: *\"The experience of that first booking going wrong kind of soured the whole thing for me. I figured if I missed that, what else am I going to miss.\"*\n\n### What Would Have Prevented It\nSarah was clear about what would have kept her as a customer: *\"If buffer time had defaulted to like ten minutes, or if the setup had asked me, even just asked me, hey what's your typical buffer, I would probably still be using it. It's a small thing but it cost me trust early.\"*\n\nIn summary, it wasn't a fundamental product failure \u2014 it was a **poor default value** combined with an **onboarding flow that didn't prompt her about a critical setting**, leading to a real-world mistake that eroded her confidence in the tool entirely.",
+    "notes": ""
+  },
+  {
+    "question_id": "Q8",
+    "question": "Why did Yuki choose SavvyCal over Linkup?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "10_yuki"
+    ],
+    "actual_interviews": [
+      "10_yuki"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": true,
+    "latency_seconds": 10.544692958006635,
+    "answer": "Yuki chose SavvyCal over Linkup primarily for the following reasons, in her own words:\n\n1. **Email embed feature (the decisive factor):** SavvyCal lets you paste your availability as actual clickable times directly into an email, so recipients can pick a slot in seconds without leaving their inbox. Linkup only sends a link to a booking page. As Yuki put it: *\"Sending a busy executive a link to a third-party booking page is \u2014 half of them won't click. But suggested times directly in the email, they pick one in two seconds.\"* [10_yuki]\n\n2. **Price:** *\"SavvyCal is a bit cheaper at my usage.\"* [10_yuki]\n\n3. **Mobile experience:** Yuki found Linkup's mobile app poor \u2014 she said she *\"tried the Linkup mobile app once and never opened it again.\"* She noted SavvyCal's mobile wasn't great either, but was *\"slightly less bad.\"* [10_yuki]\n\nNotably, Yuki acknowledged that Linkup's booking page is actually *nicer* than SavvyCal's, and said she would likely have stayed with Linkup if it had the email embed feature: *\"The email embed is the killer feature for me. The rest of Linkup is comparable... But that one feature is decision-making for my workflow.\"* [10_yuki]",
+    "notes": ""
+  },
+  {
+    "question_id": "Q9",
+    "question": "How big is Chloe's team?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "09_chloe"
+    ],
+    "actual_interviews": [
+      "09_chloe"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": true,
+    "latency_seconds": 6.725122666917741,
+    "answer": "Chloe W. is the Director of Customer Support at a mid-market e-commerce platform, and her team has **35 people** \u2014 all customer-facing. As she put it: *\"My team. Customer support. We're thirty-five people, all customer-facing.\"* [09_chloe]",
+    "notes": ""
+  },
+  {
+    "question_id": "Q10",
+    "question": "What is the most-loved feature among Team-plan customers?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "05_diana",
+      "06_jamal",
+      "08_rafael"
+    ],
+    "actual_interviews": [
+      "05_diana",
+      "06_jamal",
+      "08_rafael"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": true,
+    "latency_seconds": 20.462101832963526,
+    "answer": "The evidence is clear and consistent. Here's the answer:\n\n---\n\n## Most-Loved Feature Among Team-Plan Customers: **Round-Robin Routing**\n\nAcross both active Team-plan customers \u2014 Diana O. (8 seats) and Jamal H. (22 seats) \u2014 **round-robin routing** is unanimously the standout, most-loved feature.\n\n**Diana O.** [05_diana] named it without hesitation when asked what feature, if removed, would actually upset her:\n> *\"Round-robin routing. Hundred percent. That is the thing. Our SDR team uses it for every inbound demo request and it basically distributes load across the team automatically based on who's available. Before Linkup we had a Slack channel where SDRs would call dibs on leads and it was chaos. Now it just works.\"*\n\nShe also specifically praised the **weighted routing** implementation:\n> *\"The fact that I can weight it. So newer SDRs get fewer leads while they're ramping, and senior people pick up the slack. That's actually unusual, not every tool lets you do that.\"*\n\n**Jamal H.** [06_jamal] echoed this just as strongly:\n> *\"The round-robin is the reason we bought it and that part is excellent. We route demo requests across like sixteen AEs and it just handles it. That's been a huge unlock. I have no notes on that part of the product.\"*\n\nEven when contemplating churn over a separate issue (Salesforce integration), Jamal acknowledged:\n> *\"The round-robin is genuinely the best in market for us.\"*\n\nThis sentiment is reinforced by Rafael M. [08_rafael], who is evaluating expansion from 5 to 40 seats and noted that his existing users \"love it\" specifically because of round-robin, calling it \"the best I've seen.\"\n\n**In short: round-robin routing is the core reason Team-plan customers buy, stay, and rave about the product.**",
+    "notes": ""
+  },
+  {
+    "question_id": "Q11",
+    "question": "What are the top three reasons trial users churn?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "01_sarah",
+      "02_marcus",
+      "03_priya",
+      "04_tom"
+    ],
+    "actual_interviews": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 8.762636250117794,
+    "answer": "(error: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model.)",
+    "notes": "pipeline raised: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model."
+  },
+  {
+    "question_id": "Q12",
+    "question": "Did anyone talk about the booking page design positively?",
+    "pipeline_name": "agent_v1",
+    "expected_interviews": [
+      "02_marcus",
+      "05_diana",
+      "07_lena",
+      "10_yuki"
+    ],
+    "actual_interviews": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 2.5593481669202447,
+    "answer": "(error: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model.)",
+    "notes": "pipeline raised: You have not yet added your payment method in the billing page and will have reduced rate limits of 3 RPM and 10K TPM. To unlock our standard rate limits, please add a payment method in the billing page for the appropriate organization in the user dashboard (https://dashboard.voyageai.com/). Even with payment methods entered, the free tokens (200M tokens for Voyage series 3) will still apply. After adding a payment method, you should see your rate limits increase after several minutes. See our pricing docs (https://docs.voyageai.com/docs/pricing) for the free tokens for your model."
+  }
+]

@@ -1,0 +1,256 @@
+[
+  {
+    "question_id": "Q1",
+    "question": "Which interviewees mentioned the onboarding having too many setup steps?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "01_sarah",
+      "02_marcus",
+      "04_tom"
+    ],
+    "actual_interviews": [
+      "01_sarah",
+      "02_marcus",
+      "04_tom"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 7.7950860830023885,
+    "answer": "Three interviewees explicitly described the onboarding as having too many setup steps:\n\n**[01_sarah] Sarah K.** walked through a setup wizard that asked her to connect her calendar, set working hours, configure event types, set meeting durations, add buffer time, and pick a URL slug. She said \"by the time I got to the third or fourth screen I kind of just wanted to send a link to someone. That was the whole reason I was there\" [01_sarah]. She estimated \"felt like seven. Maybe it was actually five. But it was a lot before I could do the thing\" [01_sarah].\n\n**[02_marcus] Marcus T.** spent \"an hour in settings\" on a Tuesday night and described \"a lot of screens before you get to the actual using it part\" [02_marcus]. He estimated \"like a dozen feels right but I'm probably exaggerating\" and specifically called out excessive granularity: \"things like, do you want to send a reminder email, how long should it be, what's the subject line \u2014 I just want defaults\" [02_marcus]. His designer Jess \"just gave up halfway through\" [02_marcus].\n\n**[04_tom] Tom B.** enumerated the steps \u2014 \"connect your calendar, set your hours, pick a URL, set up your first event type, choose durations, set up notifications, branding stuff\" \u2014 and said \"I just want a link... Why is this so much work upfront\" [04_tom]. He gave up mid-flow, closed the tab, and came back two days later, concluding \"the tool is built for teams and it's making solo users do team-level setup\" [04_tom].\n\n(Note: [08_rafael] mentioned a per-user provisioning burden, but his concern was about bulk admin automation via SCIM, which is a somewhat different issue from initial onboarding setup steps.)",
+    "notes": ""
+  },
+  {
+    "question_id": "Q2",
+    "question": "Who complained about the mobile app being worse than the web app?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "03_priya",
+      "05_diana",
+      "10_yuki"
+    ],
+    "actual_interviews": [
+      "03_priya",
+      "05_diana"
+    ],
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1": 0.8,
+    "faithfulness_pass": null,
+    "latency_seconds": 7.056931166909635,
+    "answer": "Two interviewees explicitly complained about the mobile app being worse than the web app:\n\n**Priya R. [03_priya]** \u2014 a real estate agent who relies heavily on her phone between showings. She described the gap bluntly: \"half the things I can do on web I can't do on mobile.\" Specific issues she raised included being unable to edit event types on mobile (forcing her to pull over and use her laptop), sluggish performance (\"I'd tap something and there'd be a spinner for five seconds\"), and a poor UI (\"it feels like nobody tested it on a phone \u2014 buttons too small, text gets cut off\"). She confirmed the web app itself was good \u2014 \"The web app I really liked actually\" \u2014 making the mobile shortfall all the more frustrating. She ultimately switched back to Calendly because of it [03_priya].\n\n**Diana O. [05_diana]** \u2014 Head of Sales Ops at a 60-person SaaS startup. She called the mobile experience \"like a totally different product. It's slower, missing features, the navigation is weird.\" She stopped using the mobile app entirely: \"I just don't use it on mobile, I wait until I'm at a laptop.\" She also noted it wasn't just her \u2014 \"a lot of my team complains about it too.\" Specific missing mobile features she cited included editing routing rules, viewing team availability, and accessing reports [05_diana].",
+    "notes": ""
+  },
+  {
+    "question_id": "Q3",
+    "question": "Which users said round-robin routing was a key reason they value the product?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "05_diana",
+      "06_jamal",
+      "08_rafael"
+    ],
+    "actual_interviews": [
+      "06_jamal",
+      "05_diana",
+      "08_rafael",
+      "02_marcus"
+    ],
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.8571428571428571,
+    "faithfulness_pass": null,
+    "latency_seconds": 8.504597667139024,
+    "answer": "Three interviewees explicitly identified round-robin routing as a key reason they value (or initially chose) the product:\n\n---\n\n**1. Jamal H. [06_jamal] \u2014 VP Sales, mid-market SaaS**\nJamal was the most direct about it being a purchase driver: \"The round-robin is the reason we bought it and that part is excellent. We route demo requests across like sixteen AEs and it just handles it. That's been a huge unlock. I have no notes on that part of the product.\" [06_jamal]\n\n---\n\n**2. Diana O. [05_diana] \u2014 Head of Sales Ops, 60-person SaaS startup**\nDiana called it the feature she'd be most upset to lose: \"Round-robin routing. Hundred percent. That is the thing.\" She elaborated that it replaced a chaotic Slack-based system and praised specific implementation details like weighting for newer SDRs and real-time calendar awareness. [05_diana]\n\n---\n\n**3. Rafael M. [08_rafael] \u2014 RevOps Manager, 200-person company**\nRafael offered strong praise in closing remarks: \"The product is good. The round-robin is the best I've seen.\" While he framed it as a general compliment rather than an explicit purchase reason, it was clearly a standout feature for him. [08_rafael]\n\n---\n\n**Honorable mention \u2014 Marcus T. [02_marcus]**\nMarcus noted the round-robin \"worked great\" and was \"the whole reason I was even considering it,\" but he ultimately churned due to pricing concerns, so his relationship to the product's value is more ambiguous. [02_marcus]",
+    "notes": ""
+  },
+  {
+    "question_id": "Q4",
+    "question": "Which interviewees mentioned pricing as a concern for teams under 10 people, or as a reason they didn't purchase or expand?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "02_marcus",
+      "09_chloe",
+      "10_yuki"
+    ],
+    "actual_interviews": [
+      "02_marcus",
+      "09_chloe"
+    ],
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1": 0.8,
+    "faithfulness_pass": null,
+    "latency_seconds": 9.003790749935433,
+    "answer": "Based on the excerpts, two interviewees mentioned pricing as a concern that led them not to purchase or expand:\n\n---\n\n**[02_marcus] \u2014 Marcus T., Owner of a 4-person creative agency**\n\nMarcus directly cited pricing as the primary reason he didn't purchase. At $12/head, the Team plan came to $48/month for his 4-person team. While he acknowledged \"it isn't crazy,\" his perception of the product category made it feel unjustifiable: \"my brain refuses to pay forty-eight bucks a month for a calendar.\" He made clear that a lower price point would have converted him: \"If it were six bucks a head I would've signed up without thinking about it.\" [02_marcus]\n\n---\n\n**[09_chloe] \u2014 Chloe W., Director of Customer Support at a mid-market e-commerce platform**\n\nChloe's team was 35 people, so she falls outside the \"under 10\" threshold \u2014 but pricing was still the decisive reason she didn't purchase. At $12/head, the total came to \"over four hundred dollars a month, like five thousand a year. For a scheduling tool.\" Her CFO rejected it outright in favor of HubSpot's native (free but inferior) scheduling tool. She suggested a volume discount above 25 seats, or a stripped-down tier at \"$6 a head,\" would have closed the deal. [09_chloe]\n\n---\n\n**Summary:** Only **[02_marcus]** fits the \"under 10 people\" framing specifically. He had a 4-person team and did not purchase due to pricing. **[09_chloe]** did not purchase due to pricing as well, but her team was 35 people \u2014 pricing was a concern at scale rather than for a small team.",
+    "notes": ""
+  },
+  {
+    "question_id": "Q5",
+    "question": "Who said the Salesforce integration was unreliable or broken?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "06_jamal",
+      "08_rafael",
+      "09_chloe"
+    ],
+    "actual_interviews": [
+      "06_jamal",
+      "09_chloe",
+      "08_rafael"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 6.498195583932102,
+    "answer": "Three interviewees described the Salesforce integration as unreliable or broken:\n\n1. **Jamal H.** [06_jamal] \u2014 A current customer nervous about renewal. He said the integration \"works, like, sixty percent of the time. Maybe seventy. The other thirty percent we have bookings landing on contacts that don't exist or attaching to the wrong opportunity, or the activity log doesn't show up at all.\" [06_jamal] He escalated multiple support tickets and ended up creating a manual workaround: \"one of our ops people spends like four hours a week cleaning up Salesforce records that didn't sync correctly.\" [06_jamal]\n\n2. **Chloe W.** [09_chloe] \u2014 Evaluated the product but didn't move forward. She reported that during testing, \"bookings sometimes didn't show up in the case record. Activity attribution was wrong.\" She called it a dealbreaker independent of pricing: \"If pricing had been okay, the Salesforce stuff would have been the dealbreaker by itself.\" [09_chloe]\n\n3. **Rafael M.** [08_rafael] \u2014 Considering a broader rollout but holding back. He relayed that \"the Salesforce sync is unreliable. Drops bookings, attributes things wrong, sometimes the activity doesn't log at all.\" He backed this up with recent firsthand evidence: \"Last week I sat down with our enterprise team lead and she walked me through three examples of broken syncs from the past month.\" [08_rafael]",
+    "notes": ""
+  },
+  {
+    "question_id": "Q6",
+    "question": "Which users asked for a Notion integration?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "05_diana",
+      "07_lena"
+    ],
+    "actual_interviews": [
+      "05_diana",
+      "07_lena"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": null,
+    "latency_seconds": 8.192227583844215,
+    "answer": "Two interviewees explicitly asked for a Notion integration:\n\n**Diana O. [05_diana]** \u2014 Head of Sales Ops at a 60-person SaaS startup. She asked for it emphatically: \"Notion integration. Please.\" Her use case was auto-creating a Notion page with attendee info and a template whenever a meeting is booked through Linkup. She noted they already have OKRs and meeting notes in Notion and that the existing Google Docs integration doesn't fit their workflow. She described it as a strong word-of-mouth driver: \"if you built it I would tell everyone I know.\" [05_diana]\n\n**Lena P. [07_lena]** \u2014 Solo consultant (executive coach). She called it \"the real one\" among her requests. Her use case was automatically creating or updating a client's Notion page when a booking happens, with client info pre-filled. She currently uses a Zapier workaround but finds it \"brittle\" \u2014 it only handles new clients, not returning ones. She estimated a native integration would save her \"twenty minutes a week.\" [07_lena]",
+    "notes": ""
+  },
+  {
+    "question_id": "Q7",
+    "question": "What specifically caused Sarah to lose trust in the product during her trial?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "01_sarah"
+    ],
+    "actual_interviews": [
+      "01_sarah"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": true,
+    "latency_seconds": 7.398181082913652,
+    "answer": "Sarah's loss of trust stemmed from a specific early failure with buffer time configuration.\n\nAfter completing setup and sending her booking link to a new client, the client was booked back-to-back with an existing session \u2014 with no buffer in between. As Sarah explained: \"I really need fifteen minutes between sessions. To write notes, to breathe, whatever. And Linkup booked her back-to-back with my existing client. And I just thought, how did that happen.\" [01_sarah]\n\nAlthough she was able to fix the buffer time setting afterward, the damage was already done: \"by that point I'd had to email the client and reschedule, which is exactly the thing I was trying to avoid by getting a tool like this.\" [01_sarah]\n\nThis incident triggered a broader anxiety about reliability: \"the experience of that first booking going wrong kind of soured the whole thing for me. I figured if I missed that, what else am I going to miss.\" [01_sarah]\n\nShe identified the root cause as a design/default issue rather than user error: \"I think if buffer time had defaulted to like ten minutes, or if the setup had asked me, even just asked me, hey what's your typical buffer, I would probably still be using it. It's a small thing but it cost me trust early.\" [01_sarah]\n\nIn short, the trust loss was triggered by a **concrete, real-world consequence** (having to reschedule a client) caused by a poor default setting during onboarding \u2014 and it happened early enough to color her entire perception of the product.",
+    "notes": ""
+  },
+  {
+    "question_id": "Q8",
+    "question": "Why did Yuki choose SavvyCal over Linkup?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "10_yuki"
+    ],
+    "actual_interviews": [
+      "10_yuki"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": true,
+    "latency_seconds": 6.146188458194956,
+    "answer": "Yuki chose SavvyCal over Linkup for three main reasons:\n\n**1. The email embed feature (primary reason)**\n\"One feature mostly. The email embed thing. So in SavvyCal you can paste your availability into an email as actual clickable times. The recipient sees five suggested times, picks one, done. Linkup doesn't do that, it just sends a link.\" [10_yuki] Yuki works frequently with busy executives and found that \"sending a busy executive a link to a third-party booking page is \u2014 half of them won't click. But suggested times directly in the email, they pick one in two seconds.\" [10_yuki] She later confirmed this was decisive: \"The email embed is the killer feature for me...that one feature is decision-making for my workflow.\" [10_yuki]\n\n**2. Price**\n\"SavvyCal is a bit cheaper at my usage.\" [10_yuki]\n\n**3. Mobile experience**\n\"I tried the Linkup mobile app once and never opened it again. I do a lot from my phone. SavvyCal's mobile isn't great either to be fair, but it's slightly less bad.\" [10_yuki]\n\nNotably, Yuki acknowledged that Linkup was otherwise comparable and even had a nicer booking page, and she said she \"probably\" would have stayed with Linkup if it had the email embed feature [10_yuki].",
+    "notes": ""
+  },
+  {
+    "question_id": "Q9",
+    "question": "How big is Chloe's team?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "09_chloe"
+    ],
+    "actual_interviews": [
+      "09_chloe"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "faithfulness_pass": true,
+    "latency_seconds": 2.5577502918895334,
+    "answer": "Chloe's team is **35 people**. In her own words: \"We're thirty-five people, all customer-facing.\" [09_chloe] They are a customer support team at a mid-market e-commerce platform.",
+    "notes": ""
+  },
+  {
+    "question_id": "Q10",
+    "question": "What is the most-loved feature among Team-plan customers?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "05_diana",
+      "06_jamal",
+      "08_rafael"
+    ],
+    "actual_interviews": [
+      "06_jamal",
+      "05_diana",
+      "02_marcus"
+    ],
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666,
+    "faithfulness_pass": true,
+    "latency_seconds": 5.594870833912864,
+    "answer": "Based on the interview excerpts, the **round-robin scheduling feature** stands out as the most-loved feature among Team-plan customers.\n\nMultiple Team-plan users praised it directly:\n\n- **Jamal H.** was unambiguous: \"The round-robin is the reason we bought it and that part is excellent. We route demo requests across like sixteen AEs and it just handles it. That's been a huge unlock. I have no notes on that part of the product.\" [06_jamal]\n\n- **Diana O.** went so far as to say: \"The round-robin alone makes it worth switching for any sales org.\" [05_diana]\n\n- **Marcus T.** cited round-robin as a core reason he was evaluating the Team plan in the first place \u2014 \"we wanted everyone to have their own scheduling link but with shared availability, like a round-robin thing for new client calls.\" [02_marcus]\n\nThe consistency and strength of the language used \u2014 \"huge unlock,\" \"makes it worth switching,\" and it being the primary purchase driver \u2014 makes round-robin the clear standout loved feature among Team-plan customers in these interviews.",
+    "notes": ""
+  },
+  {
+    "question_id": "Q11",
+    "question": "What are the top three reasons trial users churn?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "01_sarah",
+      "02_marcus",
+      "03_priya",
+      "04_tom"
+    ],
+    "actual_interviews": [
+      "02_marcus",
+      "09_chloe",
+      "10_yuki",
+      "05_diana"
+    ],
+    "precision": 0.25,
+    "recall": 0.25,
+    "f1": 0.25,
+    "faithfulness_pass": null,
+    "latency_seconds": 11.537458874983713,
+    "answer": "Based on the interview excerpts provided, I can identify the following reasons trial users churned, but I want to be transparent: the excerpts only give me strong evidence for **one dominant reason**, with limited signal on others.\n\n---\n\n### Reason 1: Pricing / Cost (strongest signal)\n\nMultiple interviewees cited price as the primary or major factor in not converting.\n\n- [02_marcus]: \"It came down to money in the end. Not entirely but mostly.\"\n- [09_chloe]: \"The biggest was honestly pricing. Thirty-five people at twelve a month is over four hundred dollars a month, like five thousand a year. For a scheduling tool. My CFO looked at that and said find a cheaper option.\"\n\n---\n\n### Reason 2: Missing a Specific Feature (moderate signal)\n\nOne churned trial user left because the product lacked a feature critical to their workflow.\n\n- [10_yuki] appears to have not converted due to the absence of an email embed feature (\"I'm loyal to whatever works best\"), though the excerpts don't spell out the full churn reason in the provided passages.\n\n---\n\n### Reason 3: The excerpts don't clearly support a third distinct churn reason\n\n- [05_diana] mentions mobile app issues, but she appears to be a **current user**, not a churned trial user \u2014 she says \"it wouldn't make me churn if you didn't build it,\" implying she stayed.\n\n---\n\n**Honest caveat:** The excerpts provided are limited. I can only firmly confirm **pricing** as a top churn reason from multiple voices. Asserting a definitive \"top three\" would require more interview data than what's been shared here.",
+    "notes": "scored against expected subset (not exact match)"
+  },
+  {
+    "question_id": "Q12",
+    "question": "Did anyone talk about the booking page design positively?",
+    "pipeline_name": "naive_rag",
+    "expected_interviews": [
+      "02_marcus",
+      "05_diana",
+      "07_lena",
+      "10_yuki"
+    ],
+    "actual_interviews": [
+      "02_marcus",
+      "05_diana",
+      "07_lena",
+      "10_yuki",
+      "09_chloe"
+    ],
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.888888888888889,
+    "faithfulness_pass": null,
+    "latency_seconds": 7.669182250043377,
+    "answer": "Yes, several interviewees spoke positively about the booking page design. Here's a summary of what they said:\n\n**Marcus T.** [02_marcus] said the booking page \"clients see is really nice. Clean,\" noting that \"my clients commented on it twice during the trial, which never happens.\" He explicitly distinguished the front end as good, even while criticizing the back end.\n\n**Diana O.** [05_diana] said \"the booking page itself is nice. It looks professional. We've gotten compliments from prospects, which never used to happen with Calendly.\" The comparison to Calendly adds particular weight to the praise.\n\n**Lena P.** [07_lena] switched to Linkup specifically because of the booking page design: \"I came from Calendly because a friend showed me the booking page design, I just thought it was nicer.\"\n\n**Yuki S.** [10_yuki] also made a favorable comparison, saying \"the booking page is nicer than SavvyCal's actually.\"\n\n**Chloe W.** [09_chloe] noted more broadly that \"the booking experience was solid,\" with customers able to book without issues during the trial.\n\nThe positive sentiment around the booking page is consistent and cross-cutting \u2014 it shows up across solo consultants, agency owners, and larger teams, and is frequently framed as a competitive advantage over tools like Calendly and SavvyCal.",
+    "notes": ""
+  }
+]
